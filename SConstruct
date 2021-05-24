@@ -23,26 +23,26 @@ sc.Export('env')
 
 env.SConsignFile()
 
-#flag = 'simulation_compare'
-#sc.SConscript(flag + '/sconscript', exports=['flag'])
-#
-#flag = 'simulation_do_no_harm'
-#sc.SConscript(flag + '/sconscript', exports=['flag'])
-#
-#flag = 'simulation_cost_decline'
-#sc.SConscript(flag + '/sconscript', exports=['flag'])
-##
+flag = 'simulation_compare'
+sc.SConscript(flag + '/sconscript', exports=['flag'])
+
+flag = 'simulation_do_no_harm'
+sc.SConscript(flag + '/sconscript', exports=['flag'])
+
+flag = 'simulation_cost_decline'
+sc.SConscript(flag + '/sconscript', exports=['flag'])
+
 flag = 'simulation_coverage_agg'
 sc.SConscript(flag + '/sconscript', exports=['flag'])
+
+flag = 'simulation_num_splits'
+sc.SConscript(flag + '/sconscript', exports=['flag'])
 #
-#flag = 'simulation_num_splits'
-#sc.SConscript(flag + '/sconscript', exports=['flag'])
-##
-#flag = 'simulation_misspecification'
-#sc.SConscript(flag + '/sconscript', exports=['flag'])
-#
-#flag = 'simulation_misspecification_parametric'
-#sc.SConscript(flag + '/sconscript', exports=['flag'])
+flag = 'simulation_misspecification'
+sc.SConscript(flag + '/sconscript', exports=['flag'])
+
+flag = 'simulation_misspecification_parametric'
+sc.SConscript(flag + '/sconscript', exports=['flag'])
 
 flag = 'mimic_in_hospital_mortality'
 sc.SConscript(flag + '/sconscript', exports=['flag'])
@@ -55,10 +55,10 @@ sc.SConscript(flag + '/sconscript', exports=['flag'])
 
 flag = 'mimic_length_of_stay_holdout'
 sc.SConscript(flag + '/sconscript', exports=['flag'])
-##
-#flag = 'mnist_holdout'
-#sc.SConscript(flag + '/sconscript', exports=['flag'])
-#
-#flag = 'mnist_raw_holdout'
-#sc.SConscript(flag + '/sconscript', exports=['flag'])
-#
+
+flag = 'mnist_holdout'
+sc.SConscript(flag + '/sconscript', exports=['flag'])
+
+flag = 'mnist_raw_holdout'
+sc.SConscript(flag + '/sconscript', exports=['flag'])
+
