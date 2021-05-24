@@ -27,7 +27,8 @@ def parse_args(args):
 
     parser.add_argument('--file-seeds',
         type=str,
-        default="0")
+        default="0,1",
+        help="min and max seeds")
     parser.add_argument('--pi-alpha',
         type=float,
         default=0.1,
@@ -109,7 +110,7 @@ def main(args=sys.argv[1:]):
     coverage_results = []
     for num_train in args.num_trains:
         num_seeds_found = 0
-        for seed in args.file_seeds:
+        for seed in range(args.file_seeds[0], args.file_seeds[1]):
             coverage_file = args.coverage_file_temp % (num_train, seed)
             if os.path.exists(coverage_file):
                 coverage_result = pickle_from_file(coverage_file)

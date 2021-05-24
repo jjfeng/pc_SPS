@@ -54,9 +54,6 @@ def parse_args():
     parser.add_argument('--out-data-file',
         type=str,
         default="_output/data.pkl")
-    parser.add_argument('--log-file',
-        type=str,
-        default="_output/log.txt")
     parser.set_defaults()
     args = parser.parse_args()
     return args

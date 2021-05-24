@@ -82,8 +82,7 @@ nest.add(
 def generate(env, outdir, c):
     config_dict = CONFIGS[c["sim_func"]]
     targets = [
-        join(outdir, 'obs_data.pkl'),
-        join(outdir, 'data_log.txt')]
+        join(outdir, 'obs_data.pkl')]
     cmd = [
         'python generate_data.py',
         '--seed',
@@ -97,8 +96,7 @@ def generate(env, outdir, c):
         '--max-x 10',
         '--sim-noise-sd',
         config_dict["std_dev_x"],
-        '--out-data-file ${TARGETS[0]}',
-        '--log-file ${TARGETS[1]}']
+        '--out-data-file ${TARGETS[0]}']
     return env.Command(
         targets,
         [],
@@ -220,7 +218,7 @@ def create_aggregate_intervals(env, outdir, c):
     cmd = [
         'python eval_aggregate_intervals.py',
         '--seed',
-        c['seed'] + 1234,
+        c['seed'] + 123,
         '--num-test 100000',
         '--ci-alpha',
         CI_ALPHA,
@@ -257,7 +255,7 @@ def plot(env, outdir, c):
         '--pi-alpha',
         config_dict['pi_alpha'],
         '--file-seeds',
-        ",".join(map(str, SEEDS)),
+	"%d,%d" % (min(SEEDS), max(SEEDS)),
         '--coverage-file',
         cov_file_names,
         '--num-train',
