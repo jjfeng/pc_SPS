@@ -1,6 +1,6 @@
-Code for fitting selective prediction set models based on the paper: Jean Feng, Arjun Sondhi, Jessica Perry, and Noah Simon. "Selective prediction-set models with coverage rate guarantees" Under review.
+Jean Feng, Arjun Sondhi, Jessica Perry, and Noah Simon. "Selective prediction-set models with coverage rate guarantees." Biometrics, In press.
 
-Code is also included for reproducing simulation results and empirical analyses.
+Code for reproducing simulation results and empirical analyses.
 
 
 # Installation
